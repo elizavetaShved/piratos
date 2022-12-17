@@ -1,0 +1,49 @@
+@import "src/scss/sizes.scss";
+
+:root {
+  --page-content-padding: 120px;
+  --page-content-padding-small: 32px;
+  --page-content-small: 1200px;
+  --page-content-big: 1552px;
+
+  @include for-hg-down {
+    --page-content-padding: 24px;
+    --page-content-padding-small: 24px;
+  }
+
+  @include for-md-down {
+    --page-content-padding: 16px;
+    --page-content-padding-small: 16px;
+  }
+
+  --header-height: 75px;
+
+  /* colors */
+  --main-color: #021414;
+  --main-color-2: #082525;
+  --secondary-color: #001F1D;
+  --white-color: #FFFFFF;
+  --blue-color: #3FC3C6;
+  --blue-color-2: #3E9599;
+
+  /* text-shadow */
+  --blue-shadow: 0 0 16px var(--blue-color);
+
+  /* transitions */
+  --transition-duration-short: 200ms;
+  --transition-duration-fast: 350ms;
+
+  /* border-radius */
+  --border-radius-small: 8px;
+  --border-radius-middle: 12px;
+  --border-radius-big: 32px;
+
+  /* z-index */
+  --z-pagination-swiper: 2;
+  --z-index-side-bar: 3;
+  --z-index-header: 4;
+
+  /* основной шрифт проета */
+  --font-family-main: 'AlegreyaSC', sans-serif;
+}
+

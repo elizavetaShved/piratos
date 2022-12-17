@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (ship)
+
+mixin ship()
+  -
+    const grid = [
+      { img: "img/icons/hat.svg", text: "joining in clans" },
+      { img: "img/icons/flag.svg", text: "additional quests" },
+      { img: "img/icons/chest.svg", text: "new types of chests" },
+      { img: "img/icons/diamond.svg", text: "more reward" },
+      { img: "img/icons/raid-boss.svg", text: "New raid-bosses" },
+    ]
+
+  +layers(
+    "ship",
+    grid,
+    true,
+    "Ship",
+    "Treasures of raid bosses are heavily guarded. To get to them, the player needs to build a ship and assemble the team.",
+    "The ship in the game opens up the following features:"
+  )

@@ -1,0 +1,198 @@
+@import "src/scss/sizes";
+@import "src/scss/mixins";
+@import "src/scss/functions";
+
+.hidden-chest {
+  &__page-content {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+
+    @include for-lg-down {
+      padding: 90px 0;
+    }
+
+    @include for-md-down {
+      padding: 80px 0;
+    }
+
+    @include for-xs-down {
+      margin: 0 calc(var(--page-content-padding) * -1);
+    }
+  }
+
+  &__content {
+    @include img-background(contain);
+    width: 100%;
+    height: calc(var(--page-content-small) / 1.58);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    @include for-lg-down {
+      height: calc(var(--page-content-small) / 1.68);
+    }
+
+    @include for-fl-down {
+      height: calc((100vw - var(--page-content-padding) * 2) / 1.48);
+    }
+
+    @include for-md-down {
+      width: 320px;
+      height: 600px;
+    }
+  }
+
+  &__info {
+    margin: 72px;
+    width: 500px;
+
+    @include for-lg-down {
+      width: 470px;
+    }
+
+    @include for-fl-down {
+      width: 410px;
+      margin: 40px;
+    }
+
+    @include for-bg-down {
+      width: 390px;
+      margin: 30px;
+    }
+
+    @include for-md-down {
+      width: 100%;
+      margin: 0;
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    color: white-shade-color(92);
+    text-shadow: var(--blue-shadow);
+    margin-bottom: 24px;
+
+    @include for-fl-down {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include for-bg-down {
+      margin-bottom: 16px;
+    }
+
+    @include for-md-down {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: white-shade-color(64);
+    margin-bottom: 16px;
+
+    @include for-lg-down {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include for-fl-down {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include for-bg-down {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include for-md-down {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: white-shade-color(92);
+    margin-bottom: 16px;
+
+    @include for-lg-down {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include for-fl-down {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include for-bg-down {
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include for-md-down {
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__btn {
+    @include img-background(contain);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 392px;
+    height: 76px;
+    padding: 0 26px 6px 26px;
+    font-size: 22px;
+    line-height: 26px;
+
+    @include for-lg-down {
+      width: 368px;
+      height: 76px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include for-bg-down {
+      width: 280px;
+      height: 76px;
+    }
+  }
+
+  &__btn-icon {
+    height: 36px;
+    margin-right: 16px;
+  }
+
+  &__btn-text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: white-shade-color(92);
+    text-shadow: var(--blue-shadow);
+
+    @include for-bg-down {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .mark {
+      color: var(--blue-color-2)
+    }
+  }
+}

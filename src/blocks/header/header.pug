@@ -1,0 +1,16 @@
+//- Все примеси в этом файле должны начинаться c имени блока (header)
+
+mixin header(navLinks)
+
+  header.header#header
+    .gl-page-content
+      .header__content
+        img(src="img/logo.svg", width="108", height="28").header__logo
+        nav.header__nav-wrapper
+          each linkItem in navLinks
+            a(href= linkItem.href).header__nav-link= linkItem.name
+
+        button(type="button")#btn-burger.header__burger-btn
+          img(src="img/header/burger-line.svg").header__burger-line
+          img(src="img/header/burger-line.svg").header__burger-line
+          img(src="img/header/burger-line.svg").header__burger-line

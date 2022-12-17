@@ -1,0 +1,18 @@
+//- Все примеси в этом файле должны начинаться c имени блока (character-rentals)
+
+mixin character-rentals()
+
+  .character-rentals.gl-block-shadows
+    .gl-page-content
+      .character-rentals__page-content.gl-border-block
+        .character-rentals__content
+          .css-background-wrapper
+            img(src="img/character-rentals/background.svg", loading="lazy", alt="background").css-background.gl-lg-hide
+            img(src="img/character-rentals/background-lg.svg", loading="lazy", alt="background").css-background.gl-lg-show.gl-md-hide
+            img(src="img/character-rentals/background-mb.svg", loading="lazy", alt="background").css-background.gl-md-show
+
+          img(src="img/character-rentals/heroes.png", loading="lazy", alt="heroes").character-rentals__heroes-img
+
+          .character-rentals__info
+            .character-rentals__title Scholarship program with character rentals
+            .character-rentals__caption You can rent characters to other players or rent them for yourself from other players.

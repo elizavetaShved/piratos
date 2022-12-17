@@ -1,0 +1,86 @@
+@import "src/scss/sizes";
+@import "src/scss/mixins";
+@import "src/scss/functions";
+
+.footer {
+  padding: 56px 0;
+  background-color: var(--main-color);
+
+  @include for-md-down {
+    padding: 36px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-md-down {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 108px;
+    height: 28px;
+    margin-right: 40px;
+
+    @include for-md-down {
+      width: 92px;
+      height: 24px;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+
+    @include for-md-down {
+      order: 3;
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    transition: opacity var(--transition-duration-short);
+
+    & + & {
+      margin-left: 36px;
+
+      @include for-md-down {
+        margin-left: 24px;
+      }
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__link-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  &__email {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: white-shade-color(92);
+    transition: color var(--transition-duration-short);
+
+    @include for-md-down {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 24px;
+    }
+
+    &:hover {
+      color: white-shade-color(72);
+    }
+  }
+}

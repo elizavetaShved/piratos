@@ -1,0 +1,50 @@
+@import "src/scss/sizes";
+@import "src/scss/functions";
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--main-color);
+  grid-gap: 58px;
+  padding: 48px 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.6s linear;
+  backdrop-filter: blur(10px);
+  z-index: var(--z-index-side-bar);
+
+  @include for-bg-up {
+    display: none;
+  }
+
+  &.mod-show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__nav-link {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: white-shade-color(92);
+
+    & + & {
+      margin-top: 24px;
+    }
+  }
+}

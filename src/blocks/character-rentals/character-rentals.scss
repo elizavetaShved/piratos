@@ -1,0 +1,123 @@
+@import "src/scss/sizes";
+@import "src/scss/functions";
+@import "src/scss/mixins";
+
+.character-rentals {
+  &__page-content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+
+    @include for-lg-down {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    @include for-md-down {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__content {
+    @include img-background(contain);
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 74px;
+    padding-left: 40px;
+
+    @include for-lg-down {
+      width: calc(100vw - var(--page-content-padding) * 2);
+      height: calc((100vw - var(--page-content-padding)*2) / 3.6);
+    }
+
+    @include for-bg-down {
+      padding: 30px;
+      padding-left: 0;
+    }
+
+    @include for-md-down {
+      width: 328px;
+      height: 478px;
+      flex-direction: column-reverse;
+      padding: 36px 24px;
+      position: relative;
+    }
+
+    @include for-mb-down {
+      width: 300px;
+    }
+  }
+
+  &__info {
+    width: 500px;
+    flex: 1 1 500px;
+
+    @include for-lg-down {
+      width: 418px;
+      flex: 1 1 418px;
+    }
+
+    @include for-md-down {
+      width: 100%;
+      flex: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    color: white-shade-color(92);
+    text-shadow: var(--blue-shadow);
+    margin-bottom: 24px;
+
+    @include for-fl-down {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__caption {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: white-shade-color(64);
+
+    @include for-lg-down {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include for-fl-down {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__heroes-img {
+    object-fit: contain;
+    height: 602px;
+
+    @include for-lg-down {
+      height: 540px;
+    }
+
+    @include for-fl-down {
+      height: 406px;
+      margin-right: -20px;
+    }
+
+    @include for-md-down {
+      margin-right: 0;
+      position: absolute;
+      bottom: -110px;
+      left: 28px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (footer)
+
+mixin footer()
+  -
+    const links = [
+      {
+        name: "twitter",
+        href: "",
+      },
+      {
+        name: "inst",
+        href: "",
+      },
+      {
+        name: "in",
+        href: "",
+      }
+    ]
+
+  footer.footer
+    .gl-page-content
+      .footer__content
+        img(src="img/logo.svg", width="108", height="28").footer__logo
+
+        .footer__links
+          each link in links
+            a(href=link.href, target="_blank").footer__link
+              img(src=`img/links/${link.name}.svg`, alt=link.name).footer__link-icon
+
+        a(href="mailto:info@piratos.gg").footer__email info@piratos.gg

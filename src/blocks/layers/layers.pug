@@ -1,0 +1,18 @@
+//- Все примеси в этом файле должны начинаться c имени блока (layers)
+
+mixin layers(clasName, grid, isRightContent, title, caption, gridTitle)
+
+  .layers(class=`layers--${clasName}`)
+    .gl-page-content.gl-border-block.layers__content-wrapper(class= isRightContent && "layers__content-wrapper--right")
+      .layers__content
+        if title
+          .layers__title= title
+        if caption
+          .layers__caption= caption
+        if gridTitle
+          .layers__grid-title= gridTitle
+        .layers__grid.layers__grid--two-columns
+          each item in grid
+            .layers__grid-item
+              img(src=item.img).layers__grid-item-img
+              .layers__grid-item-text= item.text
