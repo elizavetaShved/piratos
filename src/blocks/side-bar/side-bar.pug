@@ -1,9 +1,0 @@
-//- Все примеси в этом файле должны начинаться c имени блока (side-bar)
-
-mixin side-bar(navLinks)
-
-  .side-bar#side-bar
-    .gl-page-content
-      nav.side-bar__nav-wrapper
-        each linkItem in navLinks
-          a(href= linkItem.href).side-bar__nav-link= linkItem.name
