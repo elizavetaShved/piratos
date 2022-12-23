@@ -49,7 +49,7 @@ window.addEventListener('resize', () => {
         </div>
       </div>
     </header>
-    <div class="preview">
+    <div class="preview" id="preview">
       <div class="gl-page-content gl-border-block gl-border-block--hg">
         <div class="preview__content">
           <div class="preview__title-img-wrapper"><img class="preview__title-img" src="img/preview/piratos-title.svg" width="462" height="160" /></div>
@@ -58,12 +58,12 @@ window.addEventListener('resize', () => {
             <div class="preview__info-item">
               <div class="preview__info-img-wrapper"><img class="preview__info-img" src="img/icons/hat.svg" width="36" height="36" /></div>
               <div class="preview__info-caption">Game release</div>
-              <div class="preview__info-value">56 days</div>
+              <div class="preview__info-value" data-game="data-game">195 days</div>
             </div>
             <div class="preview__info-item">
               <div class="preview__info-img-wrapper"><img class="preview__info-img" src="img/icons/package.svg" /></div>
               <div class="preview__info-caption">Marketplace release</div>
-              <div class="preview__info-value">24 days</div>
+              <div class="preview__info-value" data-marketplace="data-marketplace">103 days</div>
             </div>
           </div><a class="preview__btn" href="" target="_blank">Presentation</a>
         </div>
@@ -71,8 +71,11 @@ window.addEventListener('resize', () => {
       <div class="about gl-border-block">
         <div class="gl-page-content">
           <div class="about__content">
-            <div class="about__video-wrapper">
-              <div class="about__video plyr__video-embed" data-video="data-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KoQwkJLmodE" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen="allowfullscreen"></iframe><img class="about__video-preview" src="img/about/video-preview.png" data-video-preview="data-video-preview" /></div>
+            <div class="about__video-wrapper" data-video-wrapper="data-video-wrapper">
+              <div class="about__video" data-video="data-video">
+                <div class="plyr__video-embed" data-video-iframe="data-video-iframe"><iframe class="about__video" width="560" height="315" src="https://www.youtube.com/embed/KoQwkJLmodE" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen="allowfullscreen"></iframe></div>
+              </div>
+              <div class="about__video-preview-wrapper" data-video-preview="data-video-preview"><img class="about__video-preview" src="img/about/video-preview.png" /><img class="about__video-play" src="img/about/play.svg" data-video-preview="data-video-preview" /></div>
             </div>
             <div class="about__info">
               <div class="about__title">About Piratos</div>
@@ -110,7 +113,7 @@ window.addEventListener('resize', () => {
               <div class="game-mechanics__slide-content"><img class="game-mechanics__slide-img gl-fl-hide" src="img/game-mechanics/mechanics-3.png" loading="lazy" alt="Craft" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" src="img/game-mechanics/mechanics-laptop-3.png" loading="lazy" alt="Craft" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" src="img/game-mechanics/mechanics-mobile-3.png" loading="lazy" alt="Craft" />
                 <div class="game-mechanics__info">
                   <div class="game-mechanics__caption">Craft</div>
-                  <div class="game-mechanics__value">To collect valuable resources, you will need tools.</div>
+                  <div class="game-mechanics__value">To create valuable resources, you will need special tools</div>
                 </div>
               </div>
             </div>
@@ -135,7 +138,7 @@ window.addEventListener('resize', () => {
           <div class="layers__title">Ship</div>
           <div class="layers__caption">Treasures of raid bosses are heavily guarded. To get to them, the player needs to build a ship and assemble the team.</div>
           <div class="layers__grid-title">The ship in the game opens up the following features:</div>
-          <div class="layers__grid layers__grid--two-columns">
+          <div class="layers__grid">
             <div class="layers__grid-item"><img class="layers__grid-item-img" src="img/icons/hat.svg" />
               <div class="layers__grid-item-text">joining in clans</div>
             </div>
@@ -178,7 +181,7 @@ window.addEventListener('resize', () => {
       <div class="gl-page-content gl-border-block layers__content-wrapper">
         <div class="layers__content">
           <div class="layers__title">Treasure Island</div>
-          <div class="layers__grid layers__grid--two-columns">
+          <div class="layers__grid">
             <div class="layers__grid-item"><img class="layers__grid-item-img" src="img/icons/calendar.svg" />
               <div class="layers__grid-item-text">Treasure Island appears once a month for 3 hours.</div>
             </div>
@@ -206,210 +209,223 @@ window.addEventListener('resize', () => {
       </div>
     </div>
     <div class="marketplace gl-border-block" id="marketplace">
-      <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/background.jpg" loading="lazy" alt="background" /></div>
-      <div class="gl-page-content">
-        <div class="marketplace__content">
-          <div class="marketplace__header-wrapper">
-            <div class="marketplace__title">Marketplace</div>
-            <div class="marketplace__subtitle">Coming soon</div>
-          </div>
-          <div class="marketplace__info-container">
-            <div class="marketplace__info-wrapper active" data-name="man">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+      <div class="marketplace__container">
+        <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/background.jpg" loading="lazy" alt="background" /></div>
+        <div class="gl-page-content">
+          <div class="marketplace__content">
+            <div class="marketplace__header-wrapper">
+              <div class="marketplace__title">Marketplace</div>
+              <div class="marketplace__subtitle">Coming soon</div>
+            </div>
+            <div class="marketplace__info-container">
+              <div class="marketplace__info-wrapper active" data-name="man">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Main character</div>
+                        <div class="marketplace__panel-subtitle">Man</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/man-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                </div>
+              </div>
+              <div class="marketplace__info-wrapper" data-name="woman">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Main character</div>
+                        <div class="marketplace__panel-subtitle">Woman</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/woman-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                </div>
+              </div>
+              <div class="marketplace__info-wrapper" data-name="monkey">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/monkey.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Support pet</div>
+                        <div class="marketplace__panel-subtitle">Monkey</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/monkey-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                </div>
+              </div>
+              <div class="marketplace__info-wrapper" data-name="parrot">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/parrot.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Support pet</div>
+                        <div class="marketplace__panel-subtitle">Parrot</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/parrot-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">Helps in searching for boxes and in mining resources</p>
+                </div>
+              </div>
+              <div class="marketplace__info-wrapper" data-name="skeleton">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Raid boss</div>
+                        <div class="marketplace__panel-subtitle">Golden Skeleton</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/skeleton-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
+                  <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
+                  <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
+                </div>
+              </div>
+              <div class="marketplace__info-wrapper" data-name="treasure-hunter">
+                <div class="marketplace__panel gl-fl-hide">
+                  <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+                  <div class="marketplace__panel-content">
+                    <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
+                      <div>
+                        <div class="marketplace__panel-title">Raid boss</div>
+                        <div class="marketplace__panel-subtitle">Treasure hunter</div>
+                      </div>
+                    </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                </div><img class="marketplace__percon-img" src="img/marketplace/persons/treasure-hunter-full.png" />
+                <div class="marketplace__description gl-fl-hide">
+                  <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
+                  <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
+                  <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
+                </div>
+              </div>
+            </div>
+            <div class="marketplace__swiper-container">
+              <div class="marketplace__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
+                <div class="gl-swiper__swiper-wrapper swiper-wrapper">
+                  <div class="marketplace__slide swiper-slide js-swiper-slide active" data-tab="man"><img class="marketplace__slide-img" src="img/marketplace/persons/man.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="woman"><img class="marketplace__slide-img" src="img/marketplace/persons/woman.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="monkey"><img class="marketplace__slide-img" src="img/marketplace/persons/monkey.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="parrot"><img class="marketplace__slide-img" src="img/marketplace/persons/parrot.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="skeleton"><img class="marketplace__slide-img" src="img/marketplace/persons/skeleton.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="treasure-hunter"><img class="marketplace__slide-img" src="img/marketplace/persons/treasure-hunter.png" /></div>
+                </div>
+              </div>
+              <div class="marketplace__swiper-btns-wrapper"><button class="gl-swiper__btn-nav gl-swiper__btn-nav--prev" id="js-btn-prev"></button><button class="gl-swiper__btn-nav gl-swiper__btn-nav--next" id="js-btn-next"></button></div>
+            </div>
+            <div class="marketplace__panel-wrapper gl-fl-show">
+              <div class="marketplace__panel marketplace__panel--mobile active" data-name="man">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
                     <div>
                       <div class="marketplace__panel-title">Main character</div>
                       <div class="marketplace__panel-subtitle">Man</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                    <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/man-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
               </div>
-            </div>
-            <div class="marketplace__info-wrapper" data-name="woman">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+              <div class="marketplace__panel marketplace__panel--mobile" data-name="woman">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
                     <div>
                       <div class="marketplace__panel-title">Main character</div>
                       <div class="marketplace__panel-subtitle">Woman</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                    <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/woman-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
               </div>
-            </div>
-            <div class="marketplace__info-wrapper" data-name="monkey">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+              <div class="marketplace__panel marketplace__panel--mobile" data-name="monkey">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/monkey.svg" />
                     <div>
                       <div class="marketplace__panel-title">Support pet</div>
                       <div class="marketplace__panel-subtitle">Monkey</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
+                    <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/monkey-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
               </div>
-            </div>
-            <div class="marketplace__info-wrapper" data-name="parrot">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+              <div class="marketplace__panel marketplace__panel--mobile" data-name="parrot">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/parrot.svg" />
                     <div>
                       <div class="marketplace__panel-title">Support pet</div>
                       <div class="marketplace__panel-subtitle">Parrot</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">Helps in searching for boxes and in mining resources</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/parrot-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">Helps in searching for boxes and in mining resources</p>
               </div>
-            </div>
-            <div class="marketplace__info-wrapper" data-name="skeleton">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+              <div class="marketplace__panel marketplace__panel--mobile" data-name="skeleton">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
                     <div>
                       <div class="marketplace__panel-title">Raid boss</div>
-                      <div class="marketplace__panel-subtitle">Skeleton</div>
+                      <div class="marketplace__panel-subtitle">Golden Skeleton</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
+                  </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
+                    <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
+                    <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/skeleton-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">Information about the Skeleton boss</p>
               </div>
-            </div>
-            <div class="marketplace__info-wrapper" data-name="treasure-hunter">
-              <div class="marketplace__panel gl-fl-hide">
-                <div class="css-background-wrapper"><img class="css-background" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /></div>
+              <div class="marketplace__panel marketplace__panel--mobile" data-name="treasure-hunter">
+                <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
                 <div class="marketplace__panel-content">
                   <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
                     <div>
                       <div class="marketplace__panel-title">Raid boss</div>
                       <div class="marketplace__panel-subtitle">Treasure hunter</div>
                     </div>
-                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
-                </div>
-              </div><img class="marketplace__percon-img" src="img/marketplace/persons/treasure-hunter-full.png" />
-              <div class="marketplace__description gl-fl-hide">
-                <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
-                <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
-                <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
-              </div>
-            </div>
-          </div>
-          <div class="marketplace__swiper-container">
-            <div class="marketplace__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
-              <div class="gl-swiper__swiper-wrapper swiper-wrapper"><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/man.png" data-tab="man" /><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/woman.png" data-tab="woman" /><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/monkey.png" data-tab="monkey" /><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/parrot.png" data-tab="parrot" /><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/skeleton.png" data-tab="skeleton" /><img class="marketplace__slide swiper-slide js-swiper-slide" src="img/marketplace/persons/treasure-hunter.png" data-tab="treasure-hunter" /></div>
-            </div>
-            <div class="marketplace__swiper-btns-wrapper"><button class="gl-swiper__btn-nav gl-swiper__btn-nav--prev" id="js-btn-prev"></button><button class="gl-swiper__btn-nav gl-swiper__btn-nav--next" id="js-btn-next"></button></div>
-          </div>
-          <div class="marketplace__panel-wrapper gl-fl-show">
-            <div class="marketplace__panel marketplace__panel--mobile active" data-name="man">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Main character</div>
-                    <div class="marketplace__panel-subtitle">Man</div>
                   </div>
+                  <div class="marketplace__description">
+                    <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
+                    <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
+                    <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
+                  </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
                 </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
-              </div>
-            </div>
-            <div class="marketplace__panel marketplace__panel--mobile" data-name="woman">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/hat.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Main character</div>
-                    <div class="marketplace__panel-subtitle">Woman</div>
-                  </div>
-                </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
-              </div>
-            </div>
-            <div class="marketplace__panel marketplace__panel--mobile" data-name="monkey">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/monkey.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Support pet</div>
-                    <div class="marketplace__panel-subtitle">Monkey</div>
-                  </div>
-                </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
-                  <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
-              </div>
-            </div>
-            <div class="marketplace__panel marketplace__panel--mobile" data-name="parrot">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/parrot.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Support pet</div>
-                    <div class="marketplace__panel-subtitle">Parrot</div>
-                  </div>
-                </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">Helps in searching for boxes and in mining resources</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
-              </div>
-            </div>
-            <div class="marketplace__panel marketplace__panel--mobile" data-name="skeleton">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Raid boss</div>
-                    <div class="marketplace__panel-subtitle">Skeleton</div>
-                  </div>
-                </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">Information about the Skeleton boss</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
-              </div>
-            </div>
-            <div class="marketplace__panel marketplace__panel--mobile" data-name="treasure-hunter">
-              <div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/panel.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/panel-mb.svg" loading="lazy" alt="btn" /></div>
-              <div class="marketplace__panel-content">
-                <div class="marketplace__name-wrapper"><img class="marketplace__panel-icon" src="img/icons/raid-boss.svg" />
-                  <div>
-                    <div class="marketplace__panel-title">Raid boss</div>
-                    <div class="marketplace__panel-subtitle">Treasure hunter</div>
-                  </div>
-                </div>
-                <div class="marketplace__description">
-                  <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
-                  <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
-                  <p class="marketplace__description-item">You can buy a raid boss, develop it and receive income from unsuccessful attempts to attack</p>
-                </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background gl-fl-hide" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /><img class="css-background gl-fl-show" src="img/marketplace/btn-mb.svg" loading="lazy" alt="btn" /></div></button>
               </div>
             </div>
           </div>
@@ -417,73 +433,71 @@ window.addEventListener('resize', () => {
       </div>
     </div>
     <div class="piratos-team gl-block-shadows" id="piratos-team">
-      <div class="gl-border-block">
-        <div class="gl-page-content">
-          <div class="piratos-team__page-content">
-            <div class="piratos-team__title">Piratos Team</div>
-            <div class="piratos-team__swiper-container">
-              <div class="piratos-team__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
-                <div class="gl-swiper__swiper-wrapper swiper-wrapper">
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-shakirov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Ildar Shakirov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">CFO</div>
-                    <div class="piratos-team__slide-description">Ex-advisor in international taxation at PwC and senior lawyer in a crypto fund. Now CFO at unique.network and Managing Partner at tx.legal</div>
+      <div class="gl-page-content">
+        <div class="piratos-team__page-content">
+          <div class="piratos-team__title">Piratos Team</div>
+          <div class="piratos-team__swiper-container">
+            <div class="piratos-team__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
+              <div class="gl-swiper__swiper-wrapper swiper-wrapper">
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-shakirov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Ildar Shakirov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/grigoriy-levterov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Grigoriy Levterov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">Product Owner </div>
-                    <div class="piratos-team__slide-description">9 years in crypto. 5 years of experience in promoting crypto start-ups. Co-founder of MetaDAO Guild</div>
+                  <div class="piratos-team__slide-post">CFO</div>
+                  <div class="piratos-team__slide-description">Ex-advisor in international taxation at PwC and senior lawyer in a crypto fund. Now CFO at unique.network and Managing Partner at tx.legal</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/grigoriy-levterov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Grigoriy Levterov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/karina-belyancheva.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Karina Belyancheva</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">CTO</div>
-                    <div class="piratos-team__slide-description">CEO LLC Metrck. 5 years of project management experience. Implemented 20+ project, including both web services and IOS and Android. Ex.head of management at Technaxis.</div>
+                  <div class="piratos-team__slide-post">Product Owner </div>
+                  <div class="piratos-team__slide-description">9 years in crypto. 5 years of experience in promoting crypto start-ups. Co-founder of MetaDAO Guild</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/karina-belyancheva.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Karina Belyancheva</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-muhtov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Ildar Muhtov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">Designer</div>
-                    <div class="piratos-team__slide-description">7+ years of game design and production of VR/AR projects experience.</div>
+                  <div class="piratos-team__slide-post">CTO</div>
+                  <div class="piratos-team__slide-description">CEO LLC Metrck. 5 years of project management experience. Implemented 20+ project, including both web services and IOS and Android. Ex.head of management at Technaxis.</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-muhtov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Ildar Muhtov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ilnur-muhtov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Ilnur Muhtov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">CEO/CMO</div>
-                    <div class="piratos-team__slide-description">Founder and CEO of cryptorobotics.co, founder of MetaDAO Guild, influencer with a total audience of more than 130K people</div>
+                  <div class="piratos-team__slide-post">Designer</div>
+                  <div class="piratos-team__slide-description">7+ years of game design and production of VR/AR projects experience.</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ilnur-muhtov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Ilnur Muhtov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/daniil-monchar.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Daniil Monchar</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">Advisor</div>
-                    <div class="piratos-team__slide-description">Business advisor. 5 years in GameDev. 7 years in FinTech. Ex Pet Buddies, QIWI. Present Mercuryo.</div>
+                  <div class="piratos-team__slide-post">CEO/CMO</div>
+                  <div class="piratos-team__slide-description">Founder and CEO of cryptorobotics.co, founder of MetaDAO Guild, influencer with a total audience of more than 130K people</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/daniil-monchar.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Daniil Monchar</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/renat-khalimov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Renat Khalimov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">Advisor / CEO of SEZ Innopolis</div>
-                    <div class="piratos-team__slide-description">More than 6 years of executive experience in IT industry, 10+ years of experience at sales, marketing and investor relations area.</div>
+                  <div class="piratos-team__slide-post">Advisor</div>
+                  <div class="piratos-team__slide-description">Business advisor. 5 years in GameDev. 7 years in FinTech. Ex Pet Buddies, QIWI. Present Mercuryo.</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/renat-khalimov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Renat Khalimov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
-                  <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/roman-goryunov.png" />
-                    <div class="piratos-team__slide-name-wrapper">
-                      <div class="piratos-team__slide-name">Roman Goryunov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
-                    </div>
-                    <div class="piratos-team__slide-post">Advisor</div>
-                    <div class="piratos-team__slide-description">More than 8 years of management experience in commercial and product teams, experience in managing knowledge-intensive projects. Being on the cryptocurrency market since 2018. MBA OU UK, Certified business coach.</div>
+                  <div class="piratos-team__slide-post">Advisor / CEO of SEZ Innopolis</div>
+                  <div class="piratos-team__slide-description">More than 6 years of executive experience in IT industry, 10+ years of experience at sales, marketing and investor relations area.</div>
+                </div>
+                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/roman-goryunov.png" />
+                  <div class="piratos-team__slide-name-wrapper">
+                    <div class="piratos-team__slide-name">Roman Goryunov</div><a class="piratos-team__slide-link" href="" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
+                  <div class="piratos-team__slide-post">Advisor</div>
+                  <div class="piratos-team__slide-description">More than 8 years of management experience in commercial and product teams, experience in managing knowledge-intensive projects. Being on the cryptocurrency market since 2018. MBA OU UK, Certified business coach.</div>
                 </div>
               </div>
-              <div class="piratos-team__swiper-btns-wrapper"><button class="gl-swiper__btn-nav gl-swiper__btn-nav--prev" id="js-btn-prev"></button><button class="gl-swiper__btn-nav gl-swiper__btn-nav--next" id="js-btn-next"></button></div>
             </div>
+            <div class="piratos-team__swiper-btns-wrapper"><button class="gl-swiper__btn-nav gl-swiper__btn-nav--prev" id="js-btn-prev"></button><button class="gl-swiper__btn-nav gl-swiper__btn-nav--next" id="js-btn-next"></button></div>
           </div>
         </div>
       </div>
@@ -529,7 +543,7 @@ window.addEventListener('resize', () => {
     <footer class="footer">
       <div class="gl-page-content">
         <div class="footer__content"><img class="footer__logo" src="img/logo.svg" width="108" height="28" />
-          <div class="footer__links"><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/twitter.svg" alt="twitter" /></a><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/inst.svg" alt="inst" /></a><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/in.svg" alt="in" /></a></div><a class="footer__email" href="mailto:info@piratos.gg">info@piratos.gg</a>
+          <div class="footer__links"><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/twitter.svg" alt="twitter" /></a><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/youtube.svg" alt="youtube" /></a><a class="footer__link" href="" target="_blank"><img class="footer__link-icon" src="img/links/in.svg" alt="in" /></a></div><a class="footer__email" href="mailto:info@piratos.gg">info@piratos.gg</a>
         </div>
       </div>
     </footer>
