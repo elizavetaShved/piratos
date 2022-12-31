@@ -69,14 +69,11 @@ window.addEventListener('resize', () => {
           </div><a class="preview__btn" href="pdf/presentation.pdf" target="_blank">Pitch</a>
         </div>
       </div>
-      <div class="about gl-border-block" id="about">
+      <div class="about gl-border-block" modal-video-container="modal-video-container" id="about">
         <div class="gl-page-content">
           <div class="about__content">
-            <div class="about__video-wrapper" data-video-wrapper="data-video-wrapper">
-              <div class="about__video" data-video="data-video">
-                <div class="plyr__video-embed" data-video-iframe="data-video-iframe"><iframe class="about__video" width="560" height="315" src="https://www.youtube.com/embed/KoQwkJLmodE" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen="allowfullscreen"></iframe></div>
-              </div>
-              <div class="about__video-preview-wrapper" data-video-preview="data-video-preview"><img class="about__video-preview" src="img/about/video-preview.png" /><img class="about__video-play" src="img/about/play.svg" data-video-preview="data-video-preview" /></div>
+            <div class="about__video-wrapper" video-wrapper="video-wrapper">
+              <div class="about__video-preview-wrapper" video-open="video-open"><img class="about__video-preview" src="img/about/video-preview.png" /><img class="about__video-play" src="img/about/play.svg" video-preview="video-preview" /></div>
             </div>
             <div class="about__info">
               <div class="about__title">About Piratos</div>
@@ -85,6 +82,11 @@ window.addEventListener('resize', () => {
                 <p>You can play by yourself or with friends. The strongest bosses are easier to defeat together.</p>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="gl-modal-container" modal-container="modal-container">
+          <div class="gl-modal-wrapper">
+            <div class="gl-video-iframe" modal-wrapper="modal-wrapper" modal-iframe="modal-iframe"><iframe width="560" height="315" src="https://www.youtube.com/embed/KoQwkJLmodE" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen="allowfullscreen"></iframe></div><button class="gl-close-btn-wrapper"><img class="gl-close-icon" src="img/close.svg" /></button>
           </div>
         </div>
       </div>
