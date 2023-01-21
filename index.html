@@ -73,7 +73,11 @@ window.addEventListener('resize', () => {
         <div class="gl-page-content">
           <div class="about__content">
             <div class="about__video-wrapper" video-wrapper="video-wrapper">
-              <div class="about__video-preview-wrapper" video-open="video-open"><img class="about__video-preview" src="img/about/video-preview.png" /><img class="about__video-play" src="img/about/play.svg" video-preview="video-preview" /></div>
+              <div class="about__video-preview-wrapper" video-open="video-open">
+                <picture class="about__video-preview">
+                  <source class="about__video-preview" srcset="img/about/video-preview.webp" type="image/webp" /><img class="about__video-preview" loading="lazy" src="img/about/video-preview.png" alt="video-preview" />
+                </picture><img class="about__video-play" src="img/about/play.svg" video-preview="video-preview" />
+              </div>
             </div>
             <div class="about__info">
               <div class="about__title">About Piratos</div>
@@ -97,7 +101,16 @@ window.addEventListener('resize', () => {
         <div class="game-mechanics__swiper swiper gl-swiper gl-swiper--with-pagination swiper-container" id="js-swiper-container">
           <div class="game-mechanics__swiper-wrapper gl-swiper__swiper-wrapper swiper-wrapper">
             <div class="game-mechanics__slide swiper-slide js-swiper-slide">
-              <div class="game-mechanics__slide-content"><img class="game-mechanics__slide-img gl-fl-hide" src="img/game-mechanics/mechanics-1.png" loading="lazy" alt="Move to earn" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" src="img/game-mechanics/mechanics-laptop-1.png" loading="lazy" alt="Move to earn" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" src="img/game-mechanics/mechanics-mobile-1.png" loading="lazy" alt="Move to earn" />
+              <div class="game-mechanics__slide-content">
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-1.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-hide" loading="lazy" src="img/game-mechanics/mechanics-1.png" alt="Move to earn" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-laptop-1.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" loading="lazy" src="img/game-mechanics/mechanics-laptop-1.png" alt="Move to earn" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-mobile-1.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" loading="lazy" src="img/game-mechanics/mechanics-mobile-1.png" alt="Move to earn" />
+                </picture>
                 <div class="game-mechanics__info">
                   <div class="game-mechanics__caption">Move to earn</div>
                   <div class="game-mechanics__value">You can get chests for steps. In the chests you can find items of equipment and coins. Rewards are updated every day.</div>
@@ -105,7 +118,16 @@ window.addEventListener('resize', () => {
               </div>
             </div>
             <div class="game-mechanics__slide swiper-slide js-swiper-slide">
-              <div class="game-mechanics__slide-content"><img class="game-mechanics__slide-img gl-fl-hide" src="img/game-mechanics/mechanics-2.png" loading="lazy" alt="Collect to earn" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" src="img/game-mechanics/mechanics-laptop-2.png" loading="lazy" alt="Collect to earn" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" src="img/game-mechanics/mechanics-mobile-2.png" loading="lazy" alt="Collect to earn" />
+              <div class="game-mechanics__slide-content">
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-2.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-hide" loading="lazy" src="img/game-mechanics/mechanics-2.png" alt="Collect to earn" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-laptop-2.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" loading="lazy" src="img/game-mechanics/mechanics-laptop-2.png" alt="Collect to earn" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-mobile-2.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" loading="lazy" src="img/game-mechanics/mechanics-mobile-2.png" alt="Collect to earn" />
+                </picture>
                 <div class="game-mechanics__info">
                   <div class="game-mechanics__caption">Collect to earn</div>
                   <div class="game-mechanics__value">The map is full of resources. You can collect them, sell to other players or use to create new items.</div>
@@ -113,7 +135,16 @@ window.addEventListener('resize', () => {
               </div>
             </div>
             <div class="game-mechanics__slide swiper-slide js-swiper-slide">
-              <div class="game-mechanics__slide-content"><img class="game-mechanics__slide-img gl-fl-hide" src="img/game-mechanics/mechanics-3.png" loading="lazy" alt="Craft" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" src="img/game-mechanics/mechanics-laptop-3.png" loading="lazy" alt="Craft" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" src="img/game-mechanics/mechanics-mobile-3.png" loading="lazy" alt="Craft" />
+              <div class="game-mechanics__slide-content">
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-3.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-hide" loading="lazy" src="img/game-mechanics/mechanics-3.png" alt="Craft" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-laptop-3.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" loading="lazy" src="img/game-mechanics/mechanics-laptop-3.png" alt="Craft" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-mobile-3.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" loading="lazy" src="img/game-mechanics/mechanics-mobile-3.png" alt="Craft" />
+                </picture>
                 <div class="game-mechanics__info">
                   <div class="game-mechanics__caption">Craft</div>
                   <div class="game-mechanics__value">To create valuable resources, you will need special tools</div>
@@ -121,7 +152,16 @@ window.addEventListener('resize', () => {
               </div>
             </div>
             <div class="game-mechanics__slide swiper-slide js-swiper-slide">
-              <div class="game-mechanics__slide-content"><img class="game-mechanics__slide-img gl-fl-hide" src="img/game-mechanics/mechanics-4.png" loading="lazy" alt="Hunt" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" src="img/game-mechanics/mechanics-laptop-4.png" loading="lazy" alt="Hunt" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" src="img/game-mechanics/mechanics-mobile-4.png" loading="lazy" alt="Hunt" />
+              <div class="game-mechanics__slide-content">
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-4.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-hide" loading="lazy" src="img/game-mechanics/mechanics-4.png" alt="Hunt" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-laptop-4.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-hide" loading="lazy" src="img/game-mechanics/mechanics-laptop-4.png" alt="Hunt" />
+                </picture>
+                <picture>
+                  <source srcset="img/game-mechanics/mechanics-mobile-4.webp" type="image/webp" /><img class="game-mechanics__slide-img gl-fl-show gl-mb-show" loading="lazy" src="img/game-mechanics/mechanics-mobile-4.png" alt="Hunt" />
+                </picture>
                 <div class="game-mechanics__info">
                   <div class="game-mechanics__caption">Hunt</div>
                   <div class="game-mechanics__value">Some treasures are guarded by monsters. The higher the level of the monster, the more valuable reward you can get.</div>
@@ -166,7 +206,17 @@ window.addEventListener('resize', () => {
         <div class="gl-page-content">
           <div class="hidden-chest__page-content">
             <div class="hidden-chest__content">
-              <div class="css-background-wrapper"><img class="css-background gl-lg-hide" src="img/hidden-chest/background.png" loading="lazy" alt="btn" /><img class="css-background gl-lg-show gl-md-hide" src="img/hidden-chest/background-lg.png" loading="lazy" alt="btn" /><img class="css-background gl-md-show" src="img/hidden-chest/background-mb.png" loading="lazy" alt="btn" /></div>
+              <div class="css-background-wrapper">
+                <picture>
+                  <source srcset="img/hidden-chest/background.webp" type="image/webp" /><img class="css-background gl-lg-hide" loading="lazy" src="img/hidden-chest/background.png" alt="btn" />
+                </picture>
+                <picture>
+                  <source srcset="img/hidden-chest/background-lg.webp" type="image/webp" /><img class="css-background gl-lg-show gl-md-hide" loading="lazy" src="img/hidden-chest/background-lg.png" alt="btn" />
+                </picture>
+                <picture>
+                  <source srcset="img/hidden-chest/background-mb.webp" type="image/webp" /><img class="css-background gl-md-show" loading="lazy" src="img/hidden-chest/background-mb.png" alt="btn" />
+                </picture>
+              </div>
               <div class="hidden-chest__info">
                 <div class="hidden-chest__title">Hidden chest</div>
                 <div class="hidden-chest__text">One of the most valuable treasures in the game. Hidden chest can appear at any level for any player. Location — the whole world</div>
@@ -202,7 +252,10 @@ window.addEventListener('resize', () => {
       <div class="gl-page-content">
         <div class="character-rentals__page-content gl-border-block">
           <div class="character-rentals__content">
-            <div class="css-background-wrapper"><img class="css-background gl-lg-hide" src="img/character-rentals/background.svg" loading="lazy" alt="background" /><img class="css-background gl-lg-show gl-md-hide" src="img/character-rentals/background-lg.svg" loading="lazy" alt="background" /><img class="css-background gl-md-show" src="img/character-rentals/background-mb.svg" loading="lazy" alt="background" /></div><img class="character-rentals__heroes-img" src="img/character-rentals/heroes.png" loading="lazy" alt="heroes" />
+            <div class="css-background-wrapper"><img class="css-background gl-lg-hide" src="img/character-rentals/background.svg" loading="lazy" alt="background" /><img class="css-background gl-lg-show gl-md-hide" src="img/character-rentals/background-lg.svg" loading="lazy" alt="background" /><img class="css-background gl-md-show" src="img/character-rentals/background-mb.svg" loading="lazy" alt="background" /></div>
+            <picture>
+              <source srcset="img/character-rentals/heroes.webp" type="image/webp" /><img class="character-rentals__heroes-img" loading="lazy" src="img/character-rentals/heroes.png" alt="heroes" />
+            </picture>
             <div class="character-rentals__info">
               <div class="character-rentals__title">Scholarship program with character rentals</div>
               <div class="character-rentals__caption">You can rent characters to other players or rent them for yourself from other players.</div>
@@ -232,7 +285,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/man-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/man-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/man-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
                   <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
@@ -249,7 +305,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/woman-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/woman-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/woman-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
                   <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
@@ -266,7 +325,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/monkey-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/monkey-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/monkey-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">At the start of adventure, using the move-to-earn model, you can gain strength, collect resources such as wood, resin and ore.</p>
                   <p class="marketplace__description-item">Using main character you can build a ship, assemble a crew, defeat bosses, collect treasures and enjoy other game features.</p>
@@ -283,7 +345,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/parrot-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/parrot-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/parrot-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">Helps in searching for boxes and in mining resources</p>
                 </div>
@@ -299,7 +364,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/skeleton-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/skeleton-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/skeleton-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
                   <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
@@ -317,7 +385,10 @@ window.addEventListener('resize', () => {
                       </div>
                     </div><button class="marketplace__panel-btn" type="submit">Soon on Marketplace<div class="css-background-wrapper"><img class="css-background" src="img/marketplace/btn.svg" loading="lazy" alt="btn" /></div></button>
                   </div>
-                </div><img class="marketplace__percon-img" src="img/marketplace/persons/treasure-hunter-full.png" />
+                </div>
+                <picture>
+                  <source srcset="img/marketplace/persons/treasure-hunter-full.webp" type="image/webp" /><img class="marketplace__percon-img" loading="lazy" src="img/marketplace/persons/treasure-hunter-full.png" alt="img" />
+                </picture>
                 <div class="marketplace__description gl-fl-hide">
                   <p class="marketplace__description-item">The most valuable treasures are under the protection of raid bosses.</p>
                   <p class="marketplace__description-item">To defeat the bosses users need a ship and a large team.</p>
@@ -328,12 +399,36 @@ window.addEventListener('resize', () => {
             <div class="marketplace__swiper-container">
               <div class="marketplace__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
                 <div class="gl-swiper__swiper-wrapper swiper-wrapper">
-                  <div class="marketplace__slide swiper-slide js-swiper-slide active" data-tab="man"><img class="marketplace__slide-img" src="img/marketplace/persons/man.png" /></div>
-                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="woman"><img class="marketplace__slide-img" src="img/marketplace/persons/woman.png" /></div>
-                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="monkey"><img class="marketplace__slide-img" src="img/marketplace/persons/monkey.png" /></div>
-                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="parrot"><img class="marketplace__slide-img" src="img/marketplace/persons/parrot.png" /></div>
-                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="skeleton"><img class="marketplace__slide-img" src="img/marketplace/persons/skeleton.png" /></div>
-                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="treasure-hunter"><img class="marketplace__slide-img" src="img/marketplace/persons/treasure-hunter.png" /></div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide active" data-tab="man">
+                    <picture>
+                      <source srcset="img/marketplace/persons/man.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/man.png" alt="img" />
+                    </picture>
+                  </div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="woman">
+                    <picture>
+                      <source srcset="img/marketplace/persons/woman.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/woman.png" alt="img" />
+                    </picture>
+                  </div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="monkey">
+                    <picture>
+                      <source srcset="img/marketplace/persons/monkey.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/monkey.png" alt="img" />
+                    </picture>
+                  </div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="parrot">
+                    <picture>
+                      <source srcset="img/marketplace/persons/parrot.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/parrot.png" alt="img" />
+                    </picture>
+                  </div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="skeleton">
+                    <picture>
+                      <source srcset="img/marketplace/persons/skeleton.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/skeleton.png" alt="img" />
+                    </picture>
+                  </div>
+                  <div class="marketplace__slide swiper-slide js-swiper-slide" data-tab="treasure-hunter">
+                    <picture>
+                      <source srcset="img/marketplace/persons/treasure-hunter.webp" type="image/webp" /><img class="marketplace__slide-img" loading="lazy" src="img/marketplace/persons/treasure-hunter.png" alt="img" />
+                    </picture>
+                  </div>
                 </div>
               </div>
               <div class="marketplace__swiper-btns-wrapper"><button class="gl-swiper__btn-nav gl-swiper__btn-nav--prev" id="js-btn-prev"></button><button class="gl-swiper__btn-nav gl-swiper__btn-nav--next" id="js-btn-next"></button></div>
@@ -442,56 +537,80 @@ window.addEventListener('resize', () => {
           <div class="piratos-team__swiper-container">
             <div class="piratos-team__swiper swiper gl-swiper swiper-container" id="js-swiper-container">
               <div class="gl-swiper__swiper-wrapper swiper-wrapper">
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ilnur-muhtov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/ilnur-muhtov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/ilnur-muhtov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Ilnur Muhtov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/ilnur-mukhtov-a50436107" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">CEO/CMO</div>
                   <div class="piratos-team__slide-description">Founder and CEO of cryptorobotics.co, founder of MetaDAO Guild, influencer with a total audience of more than 130K people</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-shakirov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/ildar-shakirov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/ildar-shakirov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Ildar Shakirov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/ildar-shakirov-879896102" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">CFO</div>
                   <div class="piratos-team__slide-description">Ex-advisor in international taxation at PwC and senior lawyer in a crypto fund. Now CFO at unique.network and Managing Partner at tx.legal</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/karina-belyancheva.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/karina-belyancheva.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/karina-belyancheva.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Karina Belyancheva</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/karina-beliancheva-537a76200" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">CTO</div>
                   <div class="piratos-team__slide-description">CEO LLC Metrck. 5 years of project management experience. Implemented 20+ project, including both web services and IOS and Android. Ex.head of management at Technaxis.</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/grigoriy-levterov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/grigoriy-levterov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/grigoriy-levterov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Grigoriy Levterov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/grigoriy-levterov-859081123" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">Product Owner </div>
                   <div class="piratos-team__slide-description">9 years in crypto. 5 years of experience in promoting crypto start-ups. Co-founder of MetaDAO Guild</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/ildar-muhtov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/ildar-muhtov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/ildar-muhtov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Ildar Muhtov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/ildar-mukhtov" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">Designer</div>
                   <div class="piratos-team__slide-description">7+ years of game design and production of VR/AR projects experience.</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/renat-khalimov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/renat-khalimov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/renat-khalimov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Renat Khalimov</div><a class="piratos-team__slide-link" href="http://linkedin.com/in/renat-khalimov-5a47082a" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">Advisor / CEO of SEZ Innopolis</div>
                   <div class="piratos-team__slide-description">More than 6 years of executive experience in IT industry, 10+ years of experience at sales, marketing and investor relations area.</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/roman-goryunov.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/roman-goryunov.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/roman-goryunov.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
-                    <div class="piratos-team__slide-name">Roman Goryunov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/roman-goriunov-68079387" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
+                    <div class="piratos-team__slide-name">Roman Goriunov</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/roman-goriunov-68079387" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
                   <div class="piratos-team__slide-post">Advisor</div>
                   <div class="piratos-team__slide-description">More than 8 years of management experience in commercial and product teams, experience in managing knowledge-intensive projects. Being on the cryptocurrency market since 2018. MBA OU UK, Certified business coach.</div>
                 </div>
-                <div class="piratos-team__slide swiper-slide js-swiper-slide"><img class="piratos-team__slide-img" src="img/piratos-team/daniil-monchar.png" />
+                <div class="piratos-team__slide swiper-slide js-swiper-slide">
+                  <picture>
+                    <source srcset="img/piratos-team/daniil-monchar.webp" type="image/webp" /><img class="piratos-team__slide-img" loading="lazy" src="img/piratos-team/daniil-monchar.png" alt="img" />
+                  </picture>
                   <div class="piratos-team__slide-name-wrapper">
                     <div class="piratos-team__slide-name">Daniil Monchar</div><a class="piratos-team__slide-link" href="https://www.linkedin.com/in/daniel-monchar-9481461b9" target="_blank"><img class="piratos-team__slide-link-icon" src="img/links/in.svg" width="30" height="30" /></a>
                   </div>
@@ -510,7 +629,17 @@ window.addEventListener('resize', () => {
         <div class="product-roadmap__title">Product roadmap</div>
       </div>
       <div class="product-roadmap__map">
-        <div class="css-background-wrapper"><img class="css-background gl-lg-hide" src="img/product-roadmap/map.png" loading="lazy" alt="map" /><img class="css-background gl-lg-show gl-md-hide" src="img/product-roadmap/map-lg.png" loading="lazy" alt="map" /><img class="css-background gl-md-show" src="img/product-roadmap/map-mb.png" loading="lazy" alt="map" /></div>
+        <div class="css-background-wrapper">
+          <picture>
+            <source srcset="img/product-roadmap/map.webp" type="image/webp" /><img class="css-background gl-lg-hide" loading="lazy" src="img/product-roadmap/map.png" alt="map" />
+          </picture>
+          <picture>
+            <source srcset="img/product-roadmap/map-lg.webp" type="image/webp" /><img class="css-background gl-lg-show gl-md-hide" loading="lazy" src="img/product-roadmap/map-lg.png" alt="map" />
+          </picture>
+          <picture>
+            <source srcset="img/product-roadmap/map-mb.webp" type="image/webp" /><img class="css-background gl-md-show" loading="lazy" src="img/product-roadmap/map-mb.png" alt="map" />
+          </picture>
+        </div>
         <div class="product-roadmap__content">
           <div class="product-roadmap__title gl-hg-hide">Product roadmap</div>
           <div>
